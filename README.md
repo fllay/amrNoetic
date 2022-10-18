@@ -48,3 +48,34 @@ Install node js
 ```  
   
  
+Install OpenCR firrmwaw
+
+```git clone https://github.com/ROBOTIS-GIT/OpenCR.git```
+ 
+ Make `opencr_ld` loader
+ 
+```
+ 610  cd OpenCR/
+  611  ls -l
+  612  cd arduino/
+  613  l s-0l
+  614  ls -l
+  615  cd opencr_develop/
+  616  ls -l
+  617  cd opencr_ld
+  618  ls -l
+  619  make
+  620  ls -l
+  621  ./opencr_ld
+```
+
+Stop ROS before download the firmware
+
+```
+pm2 stop 0
+```
+Download firmware and restart robot
+
+```
+./opencr_ld /dev/ttyACM0 115200 ./movebaseOprnCRwitMotion.ino.OpenCR.bin 
+```
